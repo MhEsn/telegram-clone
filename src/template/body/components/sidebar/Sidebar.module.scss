@@ -3,21 +3,16 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: calc(100vh - 25px - 100px * $pixelRatio);
-  width: 240px * $pixelRatio;
-  padding: 0 25px 25px;
-  margin-left: $gap * -1.25;
+  background-color: #212121;
+  color: white;
+  height: 100vh;
+  width: 420px * $pixelRatio;
   overflow-y: auto;
   transition: width 0.3s;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  
+
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  &.collapsed {
-    width: 50px;
   }
 }

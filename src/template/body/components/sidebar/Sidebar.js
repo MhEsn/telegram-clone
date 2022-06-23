@@ -1,24 +1,13 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import SidebarUserInfo from './components/user-info/SidebarUserInfo';
-import SidebarMenu from './components/menu/SidebarMenu';
+import SidebarContent from '../sidebarContent/SidebarContent';
 import styles from './Sidebar.module.scss';
 
-function SidebarOpen() {
-  const isSidebarCollapsed = useSelector(
-    (state) => state.app.isSidebarCollapsed
-  );
-
+function Sidebar() {
   return (
-    <div
-      className={`${styles.container} ${
-        isSidebarCollapsed ? styles.collapsed : ''
-      }`}
-    >
-      {!isSidebarCollapsed && <SidebarUserInfo />}
-      <SidebarMenu collapsed={isSidebarCollapsed} />
+    <div className={styles.container}>
+      <SidebarContent />
     </div>
   );
 }
 
-export default SidebarOpen;
+export default Sidebar;

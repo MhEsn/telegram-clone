@@ -1,7 +1,6 @@
 import React from 'react';
-import Header from './header/Header';
 import Body from './body/Body';
-import styles from './StyxTemplate.module.scss';
+import styles from './Template.module.scss';
 
 function StyxTemplate({ children }) {
   return (
