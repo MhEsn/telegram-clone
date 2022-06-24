@@ -2,7 +2,7 @@ import React from 'react';
 import Body from './body/Body';
 import styles from './Template.module.scss';
 
-function StyxTemplate({ children }) {
+function Template({ children }) {
   return (
     <div id={styles.container}>
       <Body>{children}</Body>
@@ -10,4 +10,4 @@ function StyxTemplate({ children }) {
   );
 }
 
-export default StyxTemplate;
+export default Template;

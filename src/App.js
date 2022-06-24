@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Template from '../src/template/Template';
 import ChatView from 'views/chat/ChatView';
 import HomeView from 'views/home/HomeView';
-import userService from 'api/userService';
+// import userService from 'api/userService';
 import './App.scss';
 const chats = require('./constants/chats.json');
 
