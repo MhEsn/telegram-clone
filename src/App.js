@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch();
 
   //mock only for axon test
-  //IF HAVE API USE THIS....
+  //WITH API USE THIS....
   // useEffect(() => {
   //   return userService
   //     .get()
@@ -21,6 +21,10 @@ function App() {
   //         type: 'user/profile',
   //         payload: result,
   //       });
+  //     }).then(()=>{
+  //        return ChatService.list()
+  //     }).then((result)=>{
+  //        dispatch({type:'chat/setChats',payload:result});
   //     })
   //     .catch((e) => {
   //       return e;
@@ -28,7 +32,7 @@ function App() {
   //     .finally();
   // }, []);
 
-  //IF DON'T HAVE API
+  //WITHOUT API
   useEffect(() => {
     dispatch({
       type: 'user/profile',

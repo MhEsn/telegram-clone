@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "profileImage": "public/images/1.jpeg",
+    "profileImage": null,
     "userName": "Jack",
     "chats": [
       {
