@@ -6,9 +6,10 @@ function ChatContent({ chats }) {
   return (
     <div className={styles.body}>
       {chats && chats.length
-        ? chats.map((chat) => {
+        ? chats.map((chat, index) => {
             return (
               <ChatItem
+                key={index}
                 id={chat.id}
                 type={chat.type}
                 content={chat.content}
