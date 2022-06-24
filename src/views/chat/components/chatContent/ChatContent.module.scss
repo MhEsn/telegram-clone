@@ -1,6 +1,7 @@
-.container {
+.body {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  align-items: center;
+  height: calc(100vh - 170px);
   overflow-y: auto;
 }

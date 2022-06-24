@@ -1,5 +1,6 @@
 const initialState = {
   selectedChat: {},
+  chats: [],
 };
 
 function ChatReducer(state = initialState, action) {
@@ -8,6 +9,16 @@ function ChatReducer(state = initialState, action) {
       return {
         ...state,
         selectedChat: action.payload,
+      };
+    case 'chat/setChats':
+      return {
+        ...state,
+        chats: action.payload,
+      };
+    case 'chat/sendMessage':
+      return {
+        ...state,
+        chats: action.payload,
       };
 
     default:

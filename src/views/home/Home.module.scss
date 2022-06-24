@@ -1,0 +1,10 @@
+@import 'styles/variables';
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $lightGray;
+  color: $whiteColor;
+  height: 100vh;
+}

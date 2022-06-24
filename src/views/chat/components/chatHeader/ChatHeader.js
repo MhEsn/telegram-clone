@@ -2,20 +2,20 @@ import React from 'react';
 import ProfilePlaceHolder from 'assets/images/profileImagePlaceholder.png';
 import styles from './ChatHeader.module.scss';
 
-function ChatHeader(props) {
+function ChatHeader({ profileImage, userName, status }) {
   return (
     <div className={styles.header}>
       <img
-        src={props.profileImage ? props.profileImage : ProfilePlaceHolder}
+        src={profileImage ? profileImage : ProfilePlaceHolder}
         className={styles.profileImage}
         alt="profileImage"
       />
       <div className={styles.content}>
         <label className={styles.userLabel}>
-          {props.userName ? props.userName : 'Unkown'}
+          {userName ? userName : 'Unkown'}
         </label>
         <label className={styles.timeLabel}>
-          {props.status ? props.status : 'last seen recently'}
+          {status ? status : 'last seen recently'}
         </label>
       </div>
     </div>
