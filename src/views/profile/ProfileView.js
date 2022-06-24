@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import ProfilePicture from './profilePicture/ProfilePicture';
 import CustomButton from 'components/customButton/CustomButton';
 import CustomInput from 'components/customInput/CustomInput';
-import styles from './Profile.module.scss';
+import styles from './ProfileView.module.scss';
 
-function Profile() {
+function ProfileView() {
   const { profile } = useSelector((state) => {
     return state.user;
   });
@@ -62,4 +62,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ProfileView;

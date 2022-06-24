@@ -16,9 +16,11 @@ function ChatReducer(state = initialState, action) {
         chats: action.payload,
       };
     case 'chat/sendMessage':
+      let newMessage = state.selectedChat;
+      newMessage.chats.push(action.payload);
       return {
         ...state,
-        chats: action.payload,
+        selectedChat: newMessage,
       };
 
     default:

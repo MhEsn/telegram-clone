@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Template from '../src/template/Template';
-import Chat from 'views/chat/Chat';
-import Home from 'views/home/Home';
+import ChatView from 'views/chat/ChatView';
+import HomeView from 'views/home/HomeView';
 import userService from 'api/userService';
 import './App.scss';
 const chats = require('./constants/chats.json');
@@ -38,19 +38,24 @@ function App() {
     });
     if (
       JSON.parse(localStorage.getItem('chats')) &&
-      !JSON.parse(localStorage.getItem('chats')).length
+      JSON.parse(localStorage.getItem('chats')).length
     ) {
+      dispatch({
+        type: 'chat/setChats',
+        payload: JSON.parse(localStorage.getItem('chats')),
+      });
+    } else {
       localStorage.setItem('chats', JSON.stringify(chats));
+      dispatch({ type: 'chat/setChats', payload: chats });
     }
-    dispatch({ type: 'chat/setChats', payload: chats });
   });
 
   return (
     <BrowserRouter>
       <Template>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/chat" element={<Chat />} />
+          <Route path="/" element={<HomeView />} />
+          <Route path="/chat/:id" element={<ChatView />} />
         </Routes>
       </Template>
     </BrowserRouter>

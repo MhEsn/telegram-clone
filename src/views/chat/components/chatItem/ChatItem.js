@@ -10,7 +10,9 @@ function ChatItem({ id, content, date, type }) {
     >
       <span className={styles.content}>
         {content}
-        <span className={styles.date}>{date}</span>
+        <span className={styles.date}>
+          {new Date(date).toLocaleDateString()}
+        </span>
       </span>
     </div>
   );

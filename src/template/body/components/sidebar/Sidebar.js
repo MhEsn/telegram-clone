@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import Profile from 'views/profile/Profile';
+import ProfileView from 'views/profile/ProfileView';
 import SidebarContent from '../sidebarContent/SidebarContent';
 import SidebarHeader from '../sidebarHeader/SidebarHeader';
 import styles from './Sidebar.module.scss';
@@ -20,9 +20,9 @@ function Sidebar() {
     chats.map((item) => {
       if (item.id === id) {
         dispatch({ type: 'chat/selectedChat', payload: item });
+        navigate(`/chat/${item.id}`);
       }
     });
-    navigate('/chat');
   }
   return (
     <div className={styles.container}>
@@ -30,7 +30,7 @@ function Sidebar() {
       {!isProfileVisible ? (
         <SidebarContent selectChat={selectChat} data={chats} />
       ) : (
-        <Profile />
+        <ProfileView />
       )}
     </div>
   );
