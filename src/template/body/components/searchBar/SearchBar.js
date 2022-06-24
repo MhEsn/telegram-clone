@@ -5,7 +5,7 @@ import styles from './SearchBar.module.scss';
 function SearchBar() {
   return (
     <>
-      <img className={styles.searchIcon} src={SearchIcon} />
+      <img className={styles.searchIcon} src={SearchIcon} alt="searchIcon" />
       <input type="text" className={styles.search} placeholder="Search" />
     </>
   );

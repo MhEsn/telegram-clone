@@ -1,5 +1,6 @@
 const initialState = {
   isSidebarCollapsed: false,
+  isProfileVisible: false,
 };
 
 function AppReducer(state = initialState, action) {
@@ -8,6 +9,11 @@ function AppReducer(state = initialState, action) {
       return {
         ...state,
         isSidebarCollapsed: action.payload,
+      };
+    case 'app/isProfileVisible':
+      return {
+        ...state,
+        isProfileVisible: action.payload,
       };
 
     default:

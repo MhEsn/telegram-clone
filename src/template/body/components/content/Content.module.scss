@@ -2,7 +2,6 @@
 
 .container {
   flex: 1;
-  padding: 0 $gap * 1.25 $gap * 1.25;
   height: calc(100vh - 25px - 100px * $pixelRatio);
   overflow: auto;
 }
